@@ -1,24 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
+import {  } from 'bootstrap';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import HomeScreen from './components/Navigation/HomeScreen';
+import HomePage from './components/Navigation/HomePage';
+import AddRole from './components/Role/AddRole'
+import ViewRoles from './components/Role/ViewRoles';
+import AddMember from './components/Member/AddMember';
+import ViewMembers from './components/Member/ViewMembers';
+import CreateMeeting from './components/Meeting/CreateMeeting';
+import ViewMeetings from './components/Meeting/VeiwMeetings';
+import ViewAssignedMembers from './components/Member/ViewAssignedMembers';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path ='/' element = {<HomeScreen/>}/>
+        <Route path='/home-page' element = {<HomePage/>}/>
+        <Route path ='/add-role' element = {<AddRole/>}/>
+        <Route path='/view-role' element = {<ViewRoles/>}/>
+        <Route path='/add-member' element = {<AddMember/>}/>
+        <Route path='/view-members' element = {<ViewMembers/>}/>
+        <Route path='/create-meeting' element = {<CreateMeeting/>}/>
+        <Route path='/view-meetings' element = {<ViewMeetings/>}/>
+        <Route path="/assigned-members/:meetingId" element={<ViewAssignedMembers />} /> {/* Route for viewing assigned members */}
+      </Routes>
+    </BrowserRouter>
   );
 }
 
