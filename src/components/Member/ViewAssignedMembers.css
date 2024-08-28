@@ -1,0 +1,82 @@
+/* ViewAssignedMembers.css */
+
+.members-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #f4f4f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.members-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.members-list li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.members-list li:last-child {
+    border-bottom: none;
+}
+
+.add-member-button {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.add-member-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.add-member-form {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.add-member-form input {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-right: 10px;
+    flex: 1;
+}
+
+.submit-button {
+    padding: 8px 12px;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.submit-button:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}

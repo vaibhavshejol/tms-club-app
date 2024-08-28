@@ -1,0 +1,17 @@
+/* src/ViewMembers.css */
+
+/* Header section with buttons */
+.header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-section h2 {
+    margin: 0;
+}
+
+/* Button styling (optional, can be customized) */
+.header-section .btn {
+    margin-left: 10px; /* Space between buttons */
+}

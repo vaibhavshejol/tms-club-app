@@ -1,0 +1,97 @@
+/* src/ViewRoles.css */
+
+.roles-container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center-aligns items horizontally */
+}
+
+.header-container {
+    width: 100%; /* Full width to ensure proper alignment */
+    display: flex;
+    justify-content: space-between; /* Space between heading and button */
+    align-items: center; /* Center items vertically */
+    margin-bottom: 20px; /* Spacing below the header container */
+}
+
+.add-role-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px; /* Slightly rounded corners */
+    align-self: flex-end; /* Align button to the right */
+}
+
+.add-role-button:hover {
+    background-color: #0056b3;
+}
+
+.roles-table {
+    width: 90%; /* Increase the width of the table */
+    border-collapse: collapse;
+    margin: 0 auto; /* Center the table horizontally */
+}
+
+.roles-table th, .roles-table td {
+    border: 1px solid #ddd;
+    padding: 12px; /* Increase padding for larger cells */
+    text-align: center; /* Center text in table cells */
+    font-size: 1rem; /* Increase font size in cells */
+}
+
+.roles-table th {
+    background-color: #f4f4f4;
+}
+
+.actions-cell {
+    display: flex;
+    justify-content: center; /* Center the buttons horizontally */
+    gap: 20px; /* Add more space between buttons */
+}
+
+.update-role-button, .toggle-role-button {
+    border-radius: 5px; /* Slightly rounded corners for all buttons */
+    padding: 8px 15px; /* Increase padding for larger buttons */
+    border: none;
+    cursor: pointer;
+    font-size: 0.875rem; /* Adjust font size if needed */
+}
+
+.update-role-button {
+    background-color: #28a745;
+    color: white;
+}
+
+.update-role-button:hover {
+    background-color: #218838;
+}
+
+.toggle-role-button.enable {
+    background-color: #007bff; /* Blue background for Enable */
+    color: white;
+}
+
+.toggle-role-button.enable:hover {
+    background-color: #0056b3;
+}
+
+.toggle-role-button.disable {
+    background-color: #dc3545; /* Red background for Disable */
+    color: white;
+}
+
+.toggle-role-button.disable:hover {
+    background-color: #c82333;
+}
+
+.header-container h1 {
+    margin: 0; /* Remove default margin */
+    font-size: 2.25rem; /* Increase font size */
+    font-weight: bold; /* Increase font weight */
+    text-align: center; /* Center the heading text */
+    flex: 1; /* Allows heading to take up available space */
+}
