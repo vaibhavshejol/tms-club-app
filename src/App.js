@@ -7,7 +7,7 @@ import AddRole from './components/Role/AddRole'
 import ViewRoles from './components/Role/ViewRoles';
 import AddMember from './components/Member/AddMember';
 import ViewMembers from './components/Member/ViewMembers';
-import CreateMeeting from './components/Meeting/CreateMeeting';
+import ScheduleMeeting from './components/Meeting/ScheduleMeeting';
 import ViewMeetings from './components/Meeting/VeiwMeetings';
 import ViewAssignedMembers from './components/Member/ViewAssignedMembers';
 
@@ -21,7 +21,7 @@ function App() {
         <Route path='/view-role' element = {<ViewRoles/>}/>
         <Route path='/add-member' element = {<AddMember/>}/>
         <Route path='/view-members' element = {<ViewMembers/>}/>
-        <Route path='/create-meeting' element = {<CreateMeeting/>}/>
+        <Route path='/create-meeting' element = {<ScheduleMeeting/>}/>
         <Route path='/view-meetings' element = {<ViewMeetings/>}/>
         <Route path="/assigned-members/:meetingId" element={<ViewAssignedMembers />} /> {/* Route for viewing assigned members */}
       </Routes>
