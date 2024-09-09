@@ -1,0 +1,45 @@
+.roles-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.roles-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.roles-table th,
+.roles-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.roles-table th {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+}
+
+.roles-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.roles-table tr:hover {
+    background-color: #e9ecef;
+}
+
+.roles-table td {
+    font-size: 1rem;
+    color: #333;
+}

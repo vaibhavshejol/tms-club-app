@@ -5,6 +5,7 @@ import HomeScreen from './components/Navigation/HomeScreen';
 import HomePage from './components/Navigation/HomePage';
 import AddRole from './components/Role/AddRole'
 import ViewRoles from './components/Role/ViewRoles';
+import MeetingRoles from './components/Role/MeetingRoles';
 import AddMember from './components/Member/AddMember';
 import ViewMembers from './components/Member/ViewMembers';
 import ScheduleMeeting from './components/Meeting/ScheduleMeeting';
@@ -19,6 +20,7 @@ function App() {
         <Route path='/home-page' element = {<HomePage/>}/>
         <Route path ='/add-role' element = {<AddRole/>}/>
         <Route path='/view-role' element = {<ViewRoles/>}/>
+        <Route path="/meeting-roles" element={<MeetingRoles />} />
         <Route path='/add-member' element = {<AddMember/>}/>
         <Route path='/view-members' element = {<ViewMembers/>}/>
         <Route path='/create-meeting' element = {<ScheduleMeeting/>}/>
