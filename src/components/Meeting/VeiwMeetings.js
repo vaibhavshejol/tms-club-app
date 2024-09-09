@@ -6,7 +6,7 @@ import HomePage from '../Navigation/HomePage';
 
 const ViewMeetings = () => {
     const [meetings, setMeetings] = useState([]);
-    const navigate = useNavigate(); // Hook for navigation
+    const navigate = useNavigate();
 
     useEffect(() => {
         const fetchMeetings = async () => {
@@ -21,16 +21,28 @@ const ViewMeetings = () => {
         fetchMeetings();
     }, []);
 
-    const handleViewMembers = (meetingId) => {
-        // Navigate to the assigned members page for the selected meeting
-        navigate(`/assigned-members/${meetingId}`);
+    const handleViewRoles = (meetingId, meetingTitle) => {
+        // Navigate to the roles page with meetingId and meetingTitle in the state
+        navigate('/meeting-roles', { state: { meetingId, meetingTitle } });
+    };
+
+    const handleCreateMeeting = () => {
+        navigate('/create-meeting');
     };
 
     return (
         <>
             <HomePage />
             <div className="table-container">
-                <h1>All Meetings</h1>
+                <div className="header-container">
+                    <h1>All Meetings</h1>
+                    <button
+                        className="create-meeting-button"
+                        onClick={handleCreateMeeting}
+                    >
+                        Create New Meeting
+                    </button>
+                </div>
                 <table className="meetings-table">
                     <thead>
                         <tr>
@@ -39,7 +51,7 @@ const ViewMeetings = () => {
                             <th>Date</th>
                             <th>Start Time</th>
                             <th>End Time</th>
-                            <th>Action</th> {/* Column for the button */}
+                            <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -52,10 +64,10 @@ const ViewMeetings = () => {
                                 <td>{meeting.meetingEndTime}</td>
                                 <td>
                                     <button
-                                        className="view-members-button"
-                                        onClick={() => handleViewMembers(meeting.meetingId)}
+                                        className="view-roles-button"
+                                        onClick={() => handleViewRoles(meeting.meetingId, meeting.meetingTitle)}
                                     >
-                                        View Members
+                                        View Roles
                                     </button>
                                 </td>
                             </tr>
